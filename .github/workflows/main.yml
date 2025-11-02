@@ -1,0 +1,14 @@
+name: Quick Ruby Test
+on: workflow_dispatch
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+      - name: Run 5s test
+        run: |
+          ruby -v
+          ruby -e "test22'; sleep 5; puts 'done ✅'"
