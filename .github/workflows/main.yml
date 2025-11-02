@@ -11,4 +11,4 @@ jobs:
       - name: Run 5s test
         run: |
           ruby -v
-          ruby -e "test22'; sleep 5; puts 'done ✅'"
+          ruby -e 'puts "hello from Actions"; sleep 5; puts "done ✅"'
